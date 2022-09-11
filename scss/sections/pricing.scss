@@ -1,0 +1,67 @@
+.pricing {
+  @include backgroundImage("../assets/images/pricing-bg.png");
+
+  &__wrapper {
+    @extend .container;
+    padding: 120px 0 100px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    margin-bottom: 48px;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    max-width: 790px;
+    margin: 0 auto 48px auto;
+  }
+
+  &__list-package {
+    @include flex-content-between;
+  }
+
+  &__package {
+    width: 370px;
+    background-color: $white-4;
+    padding: 25px;
+    border-radius: 8px;
+    color: $green;
+
+    &-title,
+    &-price {
+      @include font-style("Baloo Bhai", 37px);
+      text-transform: uppercase;
+    }
+
+    &-title {
+      margin-bottom: 26px;
+    }
+
+    &-price {
+      margin-bottom: 28px;
+    }
+
+    &-image {
+      @include size(115px, auto);
+      margin: 0 auto 50px auto;
+    }
+
+    &-description {
+      @include font-style("Montserrat", 22px);
+      margin-bottom: 30px;
+    }
+
+    &-button {
+      @include font-style("Baloo Bhai", 25px, #fff);
+      background-color: $green-4;
+      display: block;
+      padding: 19px 0;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+  }
+}

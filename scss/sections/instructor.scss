@@ -1,0 +1,41 @@
+.instructor {
+  background-color: $green;
+
+  &__wrapper {
+    @extend .container;
+    @include flex;
+    color: $white;
+  }
+
+  &__intro {
+    flex: 1;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    margin: 256px 0 30px;
+    width: 80%;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    margin-bottom: 56px;
+  }
+
+  &__button {
+    @include font-style("Baloo Bhai", 25px, $green);
+    padding: 0 96px;
+    display: inline-block;
+    background-color: $white-4;
+    line-height: 66px;
+  }
+
+  &__image {
+    @include size(700px, 970px);
+
+    img {
+      @include size(100%, 100%);
+      object-fit: cover;
+    }
+  }
+}

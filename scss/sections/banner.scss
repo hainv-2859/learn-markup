@@ -1,0 +1,67 @@
+.banner {
+  @include position(relative);
+
+  &__wrapper {
+    @extend .container;
+    @include flex;
+    padding-bottom: 205px;
+  }
+
+  &__image {
+    padding-left: 84px;
+
+    .content {
+      @include size(653px);
+      @include backgroundImage("../assets/svg/banner-avatar-border.svg");
+      @include position(relative);
+      @include flex-center;
+
+      img {
+        @include size(379px);
+        @include circle;
+        border: 4px solid $green-2;
+      }
+    }
+  }
+
+  &__intro {
+    @include flex-column;
+    align-items: center;
+    margin: 232px 100px 0 34px;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 90px, $green);
+  }
+
+  &__description {
+    @include font-style("Montserrat", 21px, $green);
+    line-height: 1.1;
+    width: 550px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    @include font-style("Lato", 17px, $white-3, 700);
+    text-transform: uppercase;
+    border-radius: 10px;
+    display: block;
+    background-color: $green;
+    line-height: 31px;
+    padding: 0 24px;
+  }
+
+  &::after {
+    @include size(653px);
+    @include position(
+      absolute,
+      calc(100% - (653px / 2)),
+      calc(0% - (653px / 2))
+    );
+    @include backgroundImage("../assets/svg/bg.svg");
+    content: "";
+    display: block;
+    opacity: 0.4;
+  }
+}

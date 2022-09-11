@@ -1,0 +1,52 @@
+.subscribe-email {
+  background-color: $green;
+
+  &__wrapper {
+    @extend .container;
+    padding: 140px 0 214px;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px, $white);
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px, $white);
+    max-width: 790px;
+    margin: 0 auto 20px auto;
+  }
+
+  &__form {
+    max-width: 775px;
+    margin: 0 auto;
+    position: relative;
+
+    .form-input {
+      @include font-style("Montserrat", 25px, $green);
+      display: block;
+      width: 100%;
+      padding: 18px 30px;
+      border-radius: 26px;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      background-color: #fff;
+    }
+
+    .form-button {
+      @include font-style("Baloo Bhai", 25px, $green);
+      @include position(absolute, 0, 0);
+      display: block;
+      padding: 13px 54px;
+      border-radius: 26px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background-color: $white-4;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+  }
+}

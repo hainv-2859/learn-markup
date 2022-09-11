@@ -1,0 +1,52 @@
+.choose-class {
+  background-color: $green;
+
+  &__wrapper {
+    @extend .container;
+    padding: 130px 0 120px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    text-transform: capitalize;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    width: 790px;
+    margin: 0 auto;
+  }
+
+  &__list-class {
+    @include flex-content-between;
+    margin-top: 16px;
+  }
+
+  &__class {
+    width: 385px;
+
+    .class-image {
+      @include size(385px, 381px);
+      @include backgroundImage("../assets/svg/border-2.svg");
+      @include flex-center;
+
+      img {
+        @include size(314px);
+        @include circle;
+        object-fit: cover;
+      }
+    }
+
+    .class-name {
+      @include font-style("Baloo Bhai", 37px);
+      text-transform: uppercase;
+      margin: 16px 0 32px;
+    }
+
+    .class-description {
+      @include font-style("Montserrat", 22px);
+    }
+  }
+}

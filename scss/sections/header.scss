@@ -1,0 +1,51 @@
+.header {
+  $root: &;
+
+  &__wrapper {
+    @extend .container;
+    @include position(relative);
+    @include flex-content-end;
+    padding: 42px 0 26px;
+  }
+
+  &__logo {
+    @include size(110px, 130px);
+    @include position(absolute, 0, null, null, 30px);
+    background-color: $green-1;
+
+    a {
+      @include size(100%, 100%);
+      @include flex-center;
+
+      img {
+        display: block;
+        width: 75%;
+      }
+    }
+  }
+
+  &__menu {
+    @include flex-content-end;
+    width: calc(100% - 140px);
+    background-color: $white-1;
+    padding-right: 20px;
+
+    &-item {
+      margin-right: 50px;
+
+      &--active {
+        #{$root}__menu-link {
+          background-color: $white-2;
+        }
+      }
+    }
+
+    &-link {
+      @include font-style("baloo-bhai", 21px, $black-1);
+      text-transform: uppercase;
+      display: block;
+      line-height: 46px;
+      padding: 0 30px 0 20px;
+    }
+  }
+}

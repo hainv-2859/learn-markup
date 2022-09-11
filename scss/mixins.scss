@@ -1,0 +1,69 @@
+@mixin size($width, $height: null) {
+  width: $width;
+
+  @if $height != null {
+    height: $height;
+  } @else {
+    height: $width;
+  }
+}
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-column {
+  @include flex;
+  flex-direction: column;
+}
+
+@mixin flex-content-end {
+  @include flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-content-between {
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin font-style(
+  $font-family,
+  $font-size: null,
+  $color: null,
+  $font-weight: null
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin backgroundImage($url, $size: cover, $repeat: no-repeat) {
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+@mixin circle {
+  border-radius: 50%;
+}
