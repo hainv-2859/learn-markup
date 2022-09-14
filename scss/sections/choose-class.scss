@@ -19,34 +19,34 @@
     margin: 0 auto;
   }
 
-  &__list-class {
+  &__list {
     @include flex-content-between;
     margin-top: 16px;
   }
 
-  &__class {
+  &__item {
     width: 385px;
+  }
 
-    .class-image {
-      @include size(385px, 381px);
-      @include backgroundImage("../assets/svg/border-2.svg");
-      @include flex-center;
+  &__image {
+    @include size(385px, 381px);
+    @include backgroundImage("../assets/svg/border-2.svg");
+    @include flex-center;
 
-      img {
-        @include size(314px);
-        @include circle;
-        object-fit: cover;
-      }
+    img {
+      @include size(314px);
+      @include circle;
+      object-fit: cover;
     }
+  }
 
-    .class-name {
-      @include font-style("Baloo Bhai", 37px);
-      text-transform: uppercase;
-      margin: 16px 0 32px;
-    }
+  &__name {
+    @include font-style("Baloo Bhai", 37px);
+    text-transform: uppercase;
+    margin: 16px 0 32px;
+  }
 
-    .class-description {
-      @include font-style("Montserrat", 22px);
-    }
+  &__info {
+    @include font-style("Montserrat", 22px);
   }
 }
