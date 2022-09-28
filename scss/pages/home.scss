@@ -48,7 +48,7 @@
 
     &-link {
       @extend .font-baloo-bhai;
-      font-size: 21px;
+      font-size: $font-size-link;
       color: $black-1;
       text-transform: uppercase;
       display: block;
@@ -75,9 +75,8 @@
       @extend .flex-center;
       width: 653px;
       height: 653px;
-      background-image: url("../assets/svg/banner-avatar-border.svg");
+      background: url("../assets/svg/banner-avatar-border.svg") no-repeat center;
       background-size: cover;
-      background-repeat: no-repeat;
       position: relative;
 
       img {
@@ -105,7 +104,7 @@
 
   &__description {
     @extend .font-montserrat;
-    font-size: 21px;
+    font-size: $font-size-link;
     color: $green;
     line-height: 1.1;
     width: 550px;
@@ -131,9 +130,8 @@
     position: absolute;
     top: calc(100% - (653px / 2));
     right: calc(0% - (653px / 2));
-    background-image: url("../assets/svg/bg.svg");
+    background: url("../assets/svg/bg.svg") no-repeat center;
     background-size: cover;
-    background-repeat: no-repeat;
     content: "";
     display: block;
     opacity: 0.4;
@@ -175,9 +173,8 @@
     @extend .flex-center;
     width: 385px;
     height: 381px;
-    background-image: url("../assets/svg/border-2.svg");
+    background: url("../assets/svg/border-2.svg") no-repeat center;
     background-size: cover;
-    background-repeat: no-repeat;
 
     img {
       width: 314px;
@@ -201,9 +198,8 @@
 
 .our-stats {
   $root: &;
-  background-image: url("../assets/images/our-stats-bg.png");
+  background: url("../assets/images/our-stats-bg.png") no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
 
   &__wrapper {
     @extend .container;
@@ -274,14 +270,13 @@
 
   &__button {
     @extend .font-baloo-bhai;
-    font-size: 25px;
+    font-size: $font-size-button;
     color: $green;
     padding: 0 96px;
     display: inline-block;
     background-color: $white-4;
     line-height: 66px;
     border-radius: 4px;
-    display: block;
   }
 
   &__image {
@@ -297,14 +292,13 @@
 }
 
 .experience {
-  background-image: url("../assets/images/experience-bg.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  padding: 108px 0 74px;
+  background: url("../assets/images/experience-bg.png") no-repeat center;
+  background-size: cover;
 
   &__wrapper {
     @extend .container;
     display: flex;
-    padding: 108px 0 74px;
     color: $green;
   }
 
@@ -336,7 +330,7 @@
 
   &__button {
     @extend .font-baloo-bhai;
-    font-size: 25px;
+    font-size: $font-size-button;
     color: $white;
     padding: 0 96px;
     text-transform: uppercase;
@@ -348,9 +342,8 @@
 }
 
 .pricing {
-  background-image: url("../assets/images/pricing-bg.png");
+  background: url("../assets/images/pricing-bg.png") no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
 
   &__wrapper {
     @extend .container;
@@ -412,8 +405,8 @@
 
     &-button {
       @extend .font-baloo-bhai;
-      font-size: 25px;
-      color: #fff;
+      font-size: $font-size-button;
+      color: $white-5;
       background-color: $green-4;
       display: block;
       padding: 19px 0;
@@ -424,9 +417,8 @@
 }
 
 .about-trainer {
-  background-image: url("../assets/images/about-trainer-bg.png");
+  background: url("../assets/images/about-trainer-bg.png") no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
 
   &__wrapper {
     @extend .container;
@@ -440,9 +432,8 @@
     @extend .flex-center;
     width: 400px;
     height: 400px;
-    background-image: url("../assets/svg/border-3.svg");
+    background: url("../assets/svg/border-3.svg") no-repeat center;
     background-size: cover;
-    background-repeat: no-repeat;
     margin: 0 auto 24px auto;
 
     img {
@@ -491,7 +482,7 @@
 
     .form-input {
       @extend .font-montserrat;
-      font-size: 25px;
+      font-size: $font-size-button;
       color: $green;
       display: block;
       width: 100%;
@@ -500,12 +491,12 @@
       text-transform: capitalize;
       border: none;
       outline: none;
-      background-color: #fff;
+      background-color: $white-5;
     }
 
     .form-button {
       @extend .font-baloo-bhai;
-      font-size: 25px;
+      font-size: $font-size-button;
       color: $green;
       position: absolute;
       top: 0;
