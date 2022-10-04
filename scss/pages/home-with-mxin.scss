@@ -1,0 +1,513 @@
+.header {
+  $root: &;
+
+  &__wrapper {
+    @extend .container;
+    @include position(relative);
+    @include flex-content-end;
+    padding: 42px 0 26px;
+  }
+
+  &__logo {
+    @include size(110px, 130px);
+    @include position(absolute, 0, null, null, 30px);
+    background-color: $green-1;
+
+    a {
+      @include size(100%, 100%);
+      @include flex-center;
+
+      img {
+        display: block;
+        width: 75%;
+      }
+    }
+  }
+
+  &__menu {
+    @include flex-content-end;
+    width: calc(100% - 140px);
+    background-color: $white-1;
+    padding-right: 20px;
+
+    &-item {
+      margin-right: 50px;
+
+      &--active {
+        #{$root}__menu-link {
+          background-color: $white-2;
+        }
+      }
+    }
+
+    &-link {
+      @include font-style("baloo-bhai", 21px, $black-1);
+      text-transform: uppercase;
+      display: block;
+      line-height: 46px;
+      padding: 0 30px 0 20px;
+    }
+  }
+}
+
+.banner {
+  $root: &;
+  @include position(relative);
+
+  &__wrapper {
+    @extend .container;
+    @include flex;
+    padding-bottom: 205px;
+  }
+
+  &__image {
+    padding-left: 84px;
+
+    #{$root}__content {
+      @include size(653px);
+      @include backgroundImage("../assets/svg/banner-avatar-border.svg");
+      @include position(relative);
+      @include flex-center;
+
+      img {
+        @include size(379px);
+        @include circle;
+        border: 4px solid $green-2;
+      }
+    }
+  }
+
+  &__intro {
+    @include flex-column;
+    align-items: center;
+    margin: 232px 100px 0 34px;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 90px, $green);
+  }
+
+  &__description {
+    @include font-style("Montserrat", 21px, $green);
+    line-height: 1.1;
+    width: 550px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    @include font-style("Lato", 17px, $white-3, 700);
+    text-transform: uppercase;
+    border-radius: 10px;
+    display: block;
+    background-color: $green;
+    line-height: 31px;
+    padding: 0 24px;
+  }
+
+  &::after {
+    @include size(653px);
+    @include position(
+      absolute,
+      calc(100% - (653px / 2)),
+      calc(0% - (653px / 2))
+    );
+    @include backgroundImage("../assets/svg/bg.svg");
+    content: "";
+    display: block;
+    opacity: 0.4;
+  }
+}
+
+.choose-class {
+  background-color: $green;
+
+  &__wrapper {
+    @extend .container;
+    padding: 130px 0 120px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    text-transform: capitalize;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    width: 790px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    @include flex-content-between;
+    margin-top: 16px;
+  }
+
+  &__item {
+    width: 385px;
+  }
+
+  &__image {
+    @include size(385px, 381px);
+    @include backgroundImage("../assets/svg/border-2.svg");
+    @include flex-center;
+
+    img {
+      @include size(314px);
+      @include circle;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    @include font-style("Baloo Bhai", 37px);
+    text-transform: uppercase;
+    margin: 16px 0 32px;
+  }
+
+  &__info {
+    @include font-style("Montserrat", 22px);
+  }
+}
+
+.our-stats {
+  @include backgroundImage("../assets/images/our-stats-bg.png");
+  $root: &;
+
+  &__wrapper {
+    @extend .container;
+    padding: 106px 0 210px;
+    text-align: center;
+    color: $green;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    text-transform: uppercase;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    width: 786px;
+    margin: 62px auto 132px;
+  }
+
+  &__list {
+    @include flex-content-between;
+  }
+
+  &__list-item {
+    @include size(320px);
+    @include circle;
+    @include flex-center;
+    padding: 24px;
+    border: 5px solid $green;
+
+    #{$root}__count {
+      @include font-style("Baloo Bhai", 67px);
+    }
+
+    #{$root}__info {
+      @include font-style("Montserrat", 27px);
+    }
+  }
+}
+
+.instructor {
+  background-color: $green;
+
+  &__wrapper {
+    @extend .container;
+    @include flex;
+    color: $white;
+  }
+
+  &__intro {
+    flex: 1;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    margin: 256px 0 30px;
+    width: 80%;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    margin-bottom: 56px;
+  }
+
+  &__button {
+    @include font-style("Baloo Bhai", 25px, $green);
+    padding: 0 96px;
+    display: inline-block;
+    background-color: $white-4;
+    line-height: 66px;
+    border-radius: 4px;
+    display: block;
+  }
+
+  &__image {
+    @include size(700px, 970px);
+
+    img {
+      @include size(100%, 100%);
+      object-fit: cover;
+    }
+  }
+}
+
+.experience {
+  @include backgroundImage("../assets/images/experience-bg.png");
+
+  &__wrapper {
+    @extend .container;
+    @include flex;
+    padding: 108px 0 74px;
+    color: $green;
+  }
+
+  &__image {
+    width: 740px;
+
+    img {
+      @include size(578px, auto);
+      margin: 0 auto;
+    }
+  }
+
+  &__intro {
+    flex: 1;
+    padding: 180px 0 0 85px;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    width: 300px;
+    margin-bottom: 56px;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    margin-bottom: 60px;
+  }
+
+  &__button {
+    @include font-style("Baloo Bhai", 25px, $white);
+    padding: 0 96px;
+    text-transform: uppercase;
+    line-height: 66px;
+    background-color: $green-4;
+    display: inline-block;
+  }
+}
+
+.pricing {
+  @include backgroundImage("../assets/images/pricing-bg.png");
+
+  &__wrapper {
+    @extend .container;
+    padding: 120px 0 100px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px);
+    margin-bottom: 48px;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px);
+    max-width: 790px;
+    margin: 0 auto 48px auto;
+  }
+
+  &__list-package {
+    @include flex-content-between;
+  }
+
+  &__package {
+    width: 370px;
+    background-color: $white-4;
+    padding: 25px;
+    border-radius: 8px;
+    color: $green;
+
+    &-title,
+    &-price {
+      @include font-style("Baloo Bhai", 37px);
+      text-transform: uppercase;
+    }
+
+    &-title {
+      margin-bottom: 26px;
+    }
+
+    &-price {
+      margin-bottom: 28px;
+    }
+
+    &-image {
+      @include size(115px, auto);
+      margin: 0 auto 50px auto;
+    }
+
+    &-info {
+      @include font-style("Montserrat", 22px);
+      margin-bottom: 30px;
+    }
+
+    &-button {
+      @include font-style("Baloo Bhai", 25px, #fff);
+      background-color: $green-4;
+      display: block;
+      padding: 19px 0;
+      text-transform: uppercase;
+      border-radius: 4px;
+    }
+  }
+}
+
+.about-trainer {
+  @include backgroundImage("../assets/images/about-trainer-bg.png");
+
+  &__wrapper {
+    @extend .container;
+    padding: 76px 0 194px 0;
+    text-align: center;
+    color: $green;
+    font-size: 58px;
+  }
+
+  &__image {
+    @include size(400px);
+    @include backgroundImage("../assets/svg/border-3.svg");
+    @include flex-center;
+    margin: 0 auto 24px auto;
+
+    img {
+      @include size(326px);
+      @include circle;
+      border: 4px solid $green;
+    }
+  }
+
+  &__description {
+    @include font-style("Montserrat");
+    margin-bottom: 65px;
+  }
+
+  &__name {
+    @include font-style("Baloo Bhai");
+  }
+}
+
+.subscribe-email {
+  background-color: $green;
+
+  &__wrapper {
+    @extend .container;
+    padding: 140px 0 214px;
+    text-align: center;
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 75px, $white);
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    @include font-style("Montserrat", 30px, $white);
+    max-width: 790px;
+    margin: 0 auto 20px auto;
+  }
+
+  &__form {
+    max-width: 775px;
+    margin: 0 auto;
+    position: relative;
+
+    .form-input {
+      @include font-style("Montserrat", 25px, $green);
+      display: block;
+      width: 100%;
+      padding: 18px 30px;
+      border-radius: 26px;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      background-color: $white-5;
+    }
+
+    .form-button {
+      @include font-style("Baloo Bhai", 25px, $green);
+      @include position(absolute, 0, 0);
+      display: block;
+      padding: 13px 54px;
+      border-radius: 26px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background-color: $white-4;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.footer {
+  background-color: $white;
+
+  &__wrapper {
+    @extend .container;
+    @include flex;
+    color: $green;
+    padding: 155px 0 135px;
+  }
+
+  &__about {
+    width: 620px;
+    padding: 0 30px 0 20px;
+
+    &-content {
+      @include font-style("Montserrat", 25px);
+    }
+  }
+
+  &__title {
+    @include font-style("Baloo Bhai", 33px);
+    margin-bottom: 36px;
+  }
+
+  &__menu {
+    flex: 1;
+    padding: 0 16px;
+
+    &-item {
+      margin-bottom: 8px;
+    }
+
+    &-link {
+      @include font-style("Myriad Pro", 25px, $green);
+      line-height: 44px;
+      text-transform: capitalize;
+    }
+
+    &-icon {
+      @include size(31px);
+      @include circle;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $green;
+      color: $white;
+      font-size: 20px;
+      padding-top: 3px;
+      margin: 0 30px 0 5px;
+    }
+  }
+}

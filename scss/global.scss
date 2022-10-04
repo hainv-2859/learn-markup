@@ -1,0 +1,44 @@
+.root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.font-baloo-bhai {
+  font-family: "baloo-bhai", sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-myriad {
+  font-family: "Myriad Pro", sans-serif;
+}
+
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.text-title {
+  @extend .font-baloo-bhai;
+  font-size: $font-size-small * 6.25;
+}
+
+.text-description {
+  @extend .font-montserrat;
+  font-size: $font-size-small * 2.5;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
