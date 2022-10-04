@@ -38,6 +38,11 @@
 
     &-item {
       margin-right: 50px;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover {
+        background-color: $white-2;
+      }
 
       &--active {
         #{$root}__menu-link {
@@ -48,7 +53,7 @@
 
     &-link {
       @extend .font-baloo-bhai;
-      font-size: $fs-link;
+      font-size: $font-size-small * 1.75;
       color: $black-1;
       text-transform: uppercase;
       display: block;
@@ -98,13 +103,13 @@
 
   &__title {
     @extend .font-baloo-bhai;
-    font-size: $fs-extra-large;
+    font-size: $font-size-large * 5;
     color: $green;
   }
 
   &__description {
     @extend .font-montserrat;
-    font-size: $fs-link;
+    font-size: $font-size-small * 1.75;
     color: $green;
     line-height: 1.1;
     width: 550px;
@@ -113,7 +118,7 @@
 
   &__link {
     @extend .font-lato;
-    font-size: $fs-banner-link;
+    font-size: $font-size-small + 1;
     color: $white-3;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
@@ -122,6 +127,13 @@
     background-color: $green;
     line-height: 31px;
     padding: 0 24px;
+    opacity: 0.9;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
   }
 
   &::after {
@@ -185,14 +197,14 @@
   }
 
   &__name {
-    font-size: $fs-class-name;
+    font-size: $font-size-large * 2;
     text-transform: uppercase;
     margin: 16px 0 32px;
   }
 
   &__info {
     @extend .font-montserrat;
-    font-size: $fs-class-info;
+    font-size: $font-size-medium * 1.375;
   }
 }
 
@@ -234,12 +246,12 @@
 
     #{$root}__count {
       @extend .font-baloo-bhai;
-      font-size: $fs-our-stats-count;
+      font-size: $font-size-medium * 4;
     }
 
     #{$root}__info {
       @extend .font-montserrat;
-      font-size: $fs-our-stats-info;
+      font-size: $font-size-base * 2;
     }
   }
 }
@@ -270,13 +282,20 @@
 
   &__button {
     @extend .font-baloo-bhai;
-    font-size: $fs-button;
+    font-size: $font-size-small * 2;
     color: $green;
     padding: 0 96px;
     display: inline-block;
     background-color: $white-4;
     line-height: 66px;
     border-radius: 4px;
+    opacity: 0.9;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
   }
 
   &__image {
@@ -330,7 +349,7 @@
 
   &__button {
     @extend .font-baloo-bhai;
-    font-size: $fs-button;
+    font-size: $font-size-small * 2;
     color: $white;
     padding: 0 96px;
     text-transform: uppercase;
@@ -338,6 +357,13 @@
     background-color: $green-4;
     display: inline-block;
     border-radius: 4px;
+    opacity: 0.9;
+    transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
   }
 }
 
@@ -379,7 +405,7 @@
     &-title,
     &-price {
       @extend .font-baloo-bhai;
-      font-size: $fs-pricing;
+      font-size: $font-size-large * 2;
       text-transform: uppercase;
     }
 
@@ -399,19 +425,26 @@
 
     &-info {
       @extend .font-montserrat;
-      font-size: calc($fs-pricing - 15px);
+      font-size: $font-size-medium;
       margin-bottom: 30px;
     }
 
     &-button {
       @extend .font-baloo-bhai;
-      font-size: $fs-button;
+      font-size: $font-size-small * 2;
       color: $white-5;
       background-color: $green-4;
       display: block;
       padding: 19px 0;
       text-transform: uppercase;
       border-radius: 4px;
+      opacity: 0.9;
+      transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
     }
   }
 }
@@ -482,7 +515,7 @@
 
     .form-input {
       @extend .font-montserrat;
-      font-size: $fs-button;
+      font-size: $font-size-small * 2;
       color: $green;
       display: block;
       width: 100%;
@@ -496,7 +529,7 @@
 
     .form-button {
       @extend .font-baloo-bhai;
-      font-size: $fs-button;
+      font-size: $font-size-small * 2;
       color: $green;
       position: absolute;
       top: 0;
@@ -510,6 +543,11 @@
       background-color: $white-4;
       cursor: pointer;
       text-transform: capitalize;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover {
+        background-color: $white-1;
+      }
     }
   }
 }
@@ -536,7 +574,7 @@
 
   &__title {
     @extend .font-baloo-bhai;
-    font-size: $fs-footer-title;
+    font-size: $font-size-medium * 2;
     margin-bottom: 36px;
   }
 
@@ -550,10 +588,17 @@
 
     &-link {
       @extend .font-myriad;
-      font-size: $fs-footer-link;
+      font-size: $font-size-small * 2;
       color: $green;
       line-height: 44px;
       text-transform: capitalize;
+      opacity: 0.9;
+      transition: opacity 0.15s ease-in-out, font-weight 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        font-weight: $font-weight-medium;
+      }
     }
 
     &-icon {
@@ -565,7 +610,7 @@
       align-items: center;
       background-color: $green;
       color: $white;
-      font-size: $fs-footer-icon;
+      font-size: $font-size-base * 1.5;
       padding-top: 3px;
       margin: 0 30px 0 5px;
     }

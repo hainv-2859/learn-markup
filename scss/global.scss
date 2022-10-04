@@ -29,12 +29,12 @@
 
 .text-title {
   @extend .font-baloo-bhai;
-  font-size: $fs-title;
+  font-size: $font-size-small * 6.25;
 }
 
 .text-description {
   @extend .font-montserrat;
-  font-size: $fs-description;
+  font-size: $font-size-small * 2.5;
 }
 
 .flex-center {

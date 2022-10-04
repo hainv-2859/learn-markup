@@ -1,7 +1,14 @@
-// font weight
-$font-weight-regular: 400;
-$font-weight-medium: 500;
+// Font-weight
+$font-weight-light: 300;
+$font-weight-base: 400;
+$font-weight-medium: 600;
 $font-weight-bold: 700;
+
+// Font-size
+$font-size-small: 12px;
+$font-size-base: 14px;
+$font-size-medium: 16px;
+$font-size-large: 18px;
 
 // color
 $white: #f4f9f4;
@@ -17,28 +24,3 @@ $green-2: #bed2ce;
 $green-4: #6b9793;
 
 $black-1: #444;
-
-// font-sizes
-
-$fs-extra-large: 90px;
-
-$fs-title: 75px;
-$fs-description: 30px;
-
-$fs-link: 21px;
-$fs-button: 25px;
-
-// section font sizes
-$fs-banner-link: 17px;
-
-$fs-class-name: 37px;
-$fs-class-info: 22px;
-
-$fs-our-stats-count: 67px;
-$fs-our-stats-info: 27px;
-
-$fs-pricing: 37px;
-
-$fs-footer-title: 33px;
-$fs-footer-link: 25px;
-$fs-footer-icon: 20px;
