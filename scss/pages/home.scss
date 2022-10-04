@@ -48,7 +48,7 @@
 
     &-link {
       @extend .font-baloo-bhai;
-      font-size: $font-size-link;
+      font-size: $fs-link;
       color: $black-1;
       text-transform: uppercase;
       display: block;
@@ -98,13 +98,13 @@
 
   &__title {
     @extend .font-baloo-bhai;
-    font-size: 90px;
+    font-size: $fs-extra-large;
     color: $green;
   }
 
   &__description {
     @extend .font-montserrat;
-    font-size: $font-size-link;
+    font-size: $fs-link;
     color: $green;
     line-height: 1.1;
     width: 550px;
@@ -113,9 +113,9 @@
 
   &__link {
     @extend .font-lato;
-    font-size: 17px;
+    font-size: $fs-banner-link;
     color: $white-3;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
     text-transform: uppercase;
     border-radius: 10px;
     display: block;
@@ -185,14 +185,14 @@
   }
 
   &__name {
-    font-size: 37px;
+    font-size: $fs-class-name;
     text-transform: uppercase;
     margin: 16px 0 32px;
   }
 
   &__info {
     @extend .font-montserrat;
-    font-size: 22px;
+    font-size: $fs-class-info;
   }
 }
 
@@ -234,12 +234,12 @@
 
     #{$root}__count {
       @extend .font-baloo-bhai;
-      font-size: 67px;
+      font-size: $fs-our-stats-count;
     }
 
     #{$root}__info {
       @extend .font-montserrat;
-      font-size: 27px;
+      font-size: $fs-our-stats-info;
     }
   }
 }
@@ -270,7 +270,7 @@
 
   &__button {
     @extend .font-baloo-bhai;
-    font-size: $font-size-button;
+    font-size: $fs-button;
     color: $green;
     padding: 0 96px;
     display: inline-block;
@@ -330,7 +330,7 @@
 
   &__button {
     @extend .font-baloo-bhai;
-    font-size: $font-size-button;
+    font-size: $fs-button;
     color: $white;
     padding: 0 96px;
     text-transform: uppercase;
@@ -379,7 +379,7 @@
     &-title,
     &-price {
       @extend .font-baloo-bhai;
-      font-size: 37px;
+      font-size: $fs-pricing;
       text-transform: uppercase;
     }
 
@@ -399,13 +399,13 @@
 
     &-info {
       @extend .font-montserrat;
-      font-size: 22px;
+      font-size: calc($fs-pricing - 15px);
       margin-bottom: 30px;
     }
 
     &-button {
       @extend .font-baloo-bhai;
-      font-size: $font-size-button;
+      font-size: $fs-button;
       color: $white-5;
       background-color: $green-4;
       display: block;
@@ -471,7 +471,7 @@
 
   &__description {
     @extend .text-description;
-    max-width: 790px;
+    max-width: $font-weight-bold;
     margin: 0 auto 20px auto;
   }
 
@@ -482,7 +482,7 @@
 
     .form-input {
       @extend .font-montserrat;
-      font-size: $font-size-button;
+      font-size: $fs-button;
       color: $green;
       display: block;
       width: 100%;
@@ -496,7 +496,7 @@
 
     .form-button {
       @extend .font-baloo-bhai;
-      font-size: $font-size-button;
+      font-size: $fs-button;
       color: $green;
       position: absolute;
       top: 0;
@@ -536,7 +536,7 @@
 
   &__title {
     @extend .font-baloo-bhai;
-    font-size: 33px;
+    font-size: $fs-footer-title;
     margin-bottom: 36px;
   }
 
@@ -550,7 +550,7 @@
 
     &-link {
       @extend .font-myriad;
-      font-size: 25px;
+      font-size: $fs-footer-link;
       color: $green;
       line-height: 44px;
       text-transform: capitalize;
@@ -565,7 +565,7 @@
       align-items: center;
       background-color: $green;
       color: $white;
-      font-size: 20px;
+      font-size: $fs-footer-icon;
       padding-top: 3px;
       margin: 0 30px 0 5px;
     }
